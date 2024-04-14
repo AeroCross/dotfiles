@@ -1,0 +1,368 @@
+{
+  // vim configuration
+  "vim.leader": " ",
+  "vim.handleKeys": {
+    "<C-n>": false
+  },
+  "vim.insertModeKeyBindings": [
+    // Enter normal mode with jj
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // Go to implementation
+    {
+      "before": ["g", "i"],
+      "commands": [
+        {
+          "command": "editor.action.goToImplementation"
+        }
+      ]
+    },
+    // Go to references
+    {
+      "before": ["g", "r"],
+      "commands": [
+        {
+          "command": "editor.action.goToReferences"
+        }
+      ]
+    },
+    // Go to type definition
+    {
+      "before": ["g", "t"],
+      "commands": [
+        {
+          "command": "editor.action.goToTypeDefinition"
+        }
+      ]
+    },
+    // Go to source definition
+    {
+      "before": ["g", "s"],
+      "commands": [
+        {
+          "command": "editor.action.goToSourceDefinition"
+        }
+      ]
+    },
+    // Go to next problem
+    {
+      "before": ["g", "n"],
+      "commands": [
+        {
+          "command": "editor.action.marker.next"
+        }
+      ]
+    },
+    // Go to previous problem
+    {
+      "before": ["g", "p"],
+      "commands": [
+        {
+          "command": "editor.action.marker.prev"
+        }
+      ]
+    },
+    // Select all
+    {
+      "before": ["<leader>", "a"],
+      "after": ["g", "g", "V", "G"]
+    },
+    // Go to matching bracket
+    {
+      "before": ["<leader>", "m"],
+      "after": ["%"]
+    },
+    // Clear Search Highlight with Enter
+    {
+      "before": ["<CR>"],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Go to beginning of line
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    // Go to end of line
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    // Copy until end of line
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    // "Find next" centres the viewport
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z"]
+    },
+    // "Find previous" centres the viewport
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    },
+    // Highlight / search word under cursor
+    {
+      "before": ["<leader>", "h"],
+      "after": ["*", "N"]
+    },
+    // Search on Dash
+    {
+      "before": ["<C-h>"],
+      "commands": [
+        {
+          "command": "extension.dash.specific"
+        }
+      ]
+    },
+    // Debug: Toggle Breakpoint
+    {
+      "before": ["<leader>", "d", "b"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "editor.debug.action.toggleBreakpoint"
+        }
+      ]
+    },
+    // Debug: Add to Watch
+    {
+      "before": ["<leader>", "d", "w"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "editor.debug.action.selectionToWatch"
+        }
+      ]
+    },
+    // Debug: Next Breakpoint
+    {
+      "before": ["<leader>", "d", "n"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "editoreditor.debug.action.goToNextBreakpoint"
+        }
+      ]
+    },
+    // Debug: Previous Breakpoint
+    {
+      "before": ["<leader>", "d", "p"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "editoreditor.debug.action.goToPreviousBreakpoint"
+        }
+      ]
+    },
+    // Debug: Attach to Node Process
+    {
+      "before": ["<leader>", "d", "a"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "extension.pwa-node-debug.attachNodeProcess"
+        }
+      ]
+    },
+    // Debug: Select and Start Debugging
+    {
+      "before": ["<leader>", "d", "s"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "workbench.action.debug.selectandstart"
+        }
+      ]
+    },
+    // Debug: Start Last Debugging Session
+    {
+      "before": ["<leader>", "D"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "workbench.action.debug.start"
+        }
+      ]
+    },
+    // Debug: Continue
+    {
+      "before": ["<leader>", "d", "c"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "workbench.action.debug.continue"
+        }
+      ]
+    },
+    // Debug: Stop
+    {
+      "before": ["<leader>", "d", "S"],
+      "after": [""],
+      "commands": [
+        {
+          "command": "workbench.action.debug.stop"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Go to beginning of line
+    {
+      "before": ["H"],
+      "after": ["^", "l"]
+    },
+    // Go to end of line
+    {
+      "before": ["L"],
+      "after": ["$", "h"]
+    },
+    // Copy until end of line
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    // Go to matching bracket
+    {
+      "before": ["<leader>", "m"],
+      "after": ["%"]
+    }
+  ],
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+  "vim.easymotionMarkerFontWeight": "bold",
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+
+  /**
+   * Visual Studio Code General Settings
+   */
+  "breadcrumbs.enabled": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.autoClosingBrackets": "never",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.shellcheck": "explicit"
+  },
+  "editor.fontFamily": "Roboto Mono Medium, Menlo, Consolas, monospace",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "300",
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlayHints.enabled": "on",
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "editor.lineHeight": 24,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.quickSuggestionsDelay": 0,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120],
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "editor.wordWrap": "off",
+  "errorLens.enabled": true,
+  "explorer.compactFolders": false,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "redhat.telemetry.enabled": true,
+  "scm.showIncomingChanges": "always",
+  "scm.showOutgoingChanges": "always",
+  "search.exclude": {
+    "**/.yarn": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "MesloLGS NF, Operator Mono, Roboto Mono, Menlo, monospace",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.stickyScroll.enabled": true,
+  "window.zoomLevel": 0,
+  "workbench.commandPalette.history": 0,
+  "workbench.settings.editor": "json",
+  "workbench.statusBar.visible": true,
+  "yaml.schemaStore.enable": true,
+  "yaml.schemas": {
+    "/Users/mcuba/src/automat-cli-ts/dist/export/schemas/v1beta1/componentSchema.json": [
+      "/config/base/component.yaml"
+    ],
+    "/Users/mcuba/src/automat-cli-ts/dist/export/schemas/v1beta1/deploymentSchema.json": [
+      "/config/*/*/*.yaml"
+    ]
+  },
+  "zenMode.fullScreen": false,
+
+  /**
+   * Language-specific settings
+   */
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.css": "postcss",
+    "*.jsx": "javascript"
+  },
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "workbench.activityBar.location": "top",
+  "git.autofetch": false,
+  "go.alternateTools": {
+    "go": "/opt/homebrew/bin/go"
+  },
+  "editor.accessibilitySupport": "off",
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "",
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
+  "editor.gotoLocation.alternativeDeclarationCommand": ""
+}

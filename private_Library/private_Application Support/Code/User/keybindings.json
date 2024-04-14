@@ -1,0 +1,157 @@
+[
+  // from https://code.visualstudio.com/updates/v1_24
+  { "key": "cmd+numpad_add", "command": "editor.action.fontZoomIn" },
+  { "key": "shift+cmd+=", "command": "editor.action.fontZoomIn" },
+  { "key": "cmd+=", "command": "editor.action.fontZoomIn" },
+  { "key": "cmd+numpad_subtract", "command": "editor.action.fontZoomOut" },
+  { "key": "shift+cmd+-", "command": "editor.action.fontZoomOut" },
+  { "key": "cmd+-", "command": "editor.action.fontZoomOut" },
+  { "key": "cmd+numpad0", "command": "editor.action.fontZoomReset" },
+  { "key": "cmd+0", "command": "editor.action.fontZoomReset" },
+
+  // other custom keybinds
+  {
+    "key": "cmd+k cmd+f",
+    "command": "workbench.action.focusPanel"
+  },
+  {
+    "key": "cmd+k cmd+e",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+k cmd+n",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+p",
+    "command": "liveshare.pinTo"
+  },
+  {
+    "key": "cmd+k shift+cmd+p",
+    "command": "liveshare.unpin"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k cmd+h",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k f",
+    "command": "-workbench.action.closeFolder"
+  },
+  // Vim keybinds
+  // Allows moving through word-wrapped paragraphs per line in normal mode
+  // See: https://github.com/VSCodeVim/Vim#-faq
+  // This disables motions with the hjkl keys
+  // {
+  //   "key": "up",
+  //   "command": "cursorUp",
+  //   "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  // },
+  // {
+  //   "key": "down",
+  //   "command": "cursorDown",
+  //   "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  // },
+  // {
+  //   "key": "k",
+  //   "command": "cursorUp",
+  //   "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  // },
+  // {
+  //   "key": "j",
+  //   "command": "cursorDown",
+  //   "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  // },
+  // save changes from the search editor
+  {
+    "key": "cmd+s",
+    "command": "searchEditorApplyChanges.apply",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "cmd+i cmd+p",
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
+  },
+  {
+    "key": "cmd+i cmd+i",
+    "command": "github.copilot.terminal.suggestCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-github.copilot.terminal.suggestCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+\\",
+    "command": "-editor.action.inlineSuggest.trigger",
+    "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "cmd+i cmd+i",
+    "command": "inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-inlineChat.start",
+    "when": "editorFocus && inlineChatHasProvider && !editorReadonly"
+  },
+  {
+    "key": "cmd+i cmd+c",
+    "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "cmd+i cmd+e",
+    "command": "github.copilot.interactiveEditor.explain"
+  },
+  {
+    "key": "cmd+i cmd+f",
+    "command": "github.copilot.interactiveEditor.fix"
+  },
+  {
+    "key": "cmd+i cmd+a",
+    "command": "github.copilot.interactiveEditor.generateTests"
+  },
+  {
+    "key": "cmd+i cmd+d",
+    "command": "github.copilot.interactiveEditor.generateDocs"
+  },
+  {
+    "key": "cmd+i cmd+t",
+    "command": "github.copilot.interactiveEditor.generate"
+  },
+  {
+    "key": "cmd+k cmd+p",
+    "command": "workbench.panel.markers.view.focus"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.showAllEditors"
+  },
+  {
+    "key": "alt+cmd+tab",
+    "command": "-workbench.action.showAllEditors"
+  }
+]
