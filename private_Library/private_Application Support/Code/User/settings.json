@@ -257,6 +257,11 @@
     {
       "before": ["<leader>", "m"],
       "after": ["%"]
+    },
+    // Do not override the current register when pasting in Visual Mode
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
     }
   ],
   "vim.easymotion": true,
@@ -278,7 +283,7 @@
     "source.fixAll.shellcheck": "explicit"
   },
   "editor.fontFamily": "Roboto Mono Medium, Menlo, Consolas, monospace",
-  "editor.fontSize": 14,
+  "editor.fontSize": 12,
   "editor.fontWeight": "300",
   "editor.inlineSuggest.enabled": true,
   "editor.inlayHints.enabled": "on",
@@ -299,6 +304,9 @@
   "editor.wordWrap": "off",
   "errorLens.enabled": true,
   "explorer.compactFolders": false,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "redhat.telemetry.enabled": true,
   "scm.showIncomingChanges": "always",
@@ -310,7 +318,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "MesloLGS NF, Operator Mono, Roboto Mono, Menlo, monospace",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.enabled": true,
@@ -364,5 +372,6 @@
   },
   "editor.gotoLocation.alternativeTypeDefinitionCommand": "",
   "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
-  "editor.gotoLocation.alternativeDeclarationCommand": ""
+  "editor.gotoLocation.alternativeDeclarationCommand": "",
+  "prettify-ts.enableHover": true
 }
