@@ -283,7 +283,7 @@
     "source.fixAll.shellcheck": "explicit"
   },
   "editor.fontFamily": "Roboto Mono Medium, Menlo, Consolas, monospace",
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "editor.fontWeight": "300",
   "editor.inlineSuggest.enabled": true,
   "editor.inlayHints.enabled": "on",
@@ -294,6 +294,9 @@
     "comments": "on",
     "strings": "on"
   },
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "",
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
+  "editor.gotoLocation.alternativeDeclarationCommand": "",
   "editor.quickSuggestionsDelay": 0,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
@@ -340,6 +343,10 @@
   /**
    * Language-specific settings
    */
+   "[blade]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.formatOnSave": true,
+},
   "[javascript]": {
     "editor.formatOnSave": true
   },
@@ -349,6 +356,14 @@
   },
   "[css]": {
     "editor.formatOnSave": true
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.tabSize": 2, // Use 2 spaces for indentation
+    "editor.insertSpaces": true, // Use spaces and not tabs for indentation
+    "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+    "editor.formatOnType": false, // Enable formatting while typing
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -362,15 +377,33 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.activityBar.location": "top",
   "git.autofetch": false,
-  "go.alternateTools": {
-    "go": "/opt/homebrew/bin/go"
-  },
   "editor.accessibilitySupport": "off",
   "[typescriptreact]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.gotoLocation.alternativeTypeDefinitionCommand": "",
-  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.referenceSearch.trigger",
-  "editor.gotoLocation.alternativeDeclarationCommand": "",
+  "blade.format.enable": true,
+  "git.blame.editorDecoration.enabled": true,
+  "rubyLsp.formatter": "standard",
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "mise",
+  },
+  "rubyLsp.linters": [
+    "standard"
+  ],
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true
+  }
 }
