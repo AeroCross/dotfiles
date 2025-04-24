@@ -108,3 +108,5 @@ autoload -Uz compinit && compinit
 # mise installation
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 MISE_NODE_COREPACK=1
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

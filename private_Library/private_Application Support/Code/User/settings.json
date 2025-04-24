@@ -278,17 +278,12 @@
    */
   "breadcrumbs.enabled": true,
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.autoClosingBrackets": "never",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.shellcheck": "explicit"
-  },
-  "editor.fontFamily": "Roboto Mono Medium, Menlo, Consolas, monospace",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.fontFamily": "RobotoMono Nerd Font Mono Medium, monospace",
   "editor.fontSize": 14,
   "editor.fontWeight": "300",
   "editor.inlineSuggest.enabled": true,
   "editor.inlayHints.enabled": "on",
-  "typescript.inlayHints.parameterNames.enabled": "none",
-  "javascript.inlayHints.parameterNames.enabled": "none",
   "editor.lineHeight": 24,
   "editor.quickSuggestions": {
     "comments": "on",
@@ -311,16 +306,12 @@
     "vscodevim.vim": 1
   },
   "markdown.preview.doubleClickToSwitchToEditor": false,
-  "redhat.telemetry.enabled": true,
-  "scm.showIncomingChanges": "always",
-  "scm.showOutgoingChanges": "always",
   "search.exclude": {
     "**/.yarn": true
   },
-  "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontFamily": "MesloLGS NF, Operator Mono, Roboto Mono, Menlo, monospace",
+  "terminal.integrated.fontFamily": "RobotoMono Nerd Font Mono Medium, monospace",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.shellIntegration.enabled": true,
@@ -329,30 +320,19 @@
   "workbench.commandPalette.history": 0,
   "workbench.settings.editor": "json",
   "workbench.statusBar.visible": true,
-  "yaml.schemaStore.enable": true,
-  "yaml.schemas": {
-    "/Users/mcuba/src/automat-cli-ts/dist/export/schemas/v1beta1/componentSchema.json": [
-      "/config/base/component.yaml"
-    ],
-    "/Users/mcuba/src/automat-cli-ts/dist/export/schemas/v1beta1/deploymentSchema.json": [
-      "/config/*/*/*.yaml"
-    ]
-  },
   "zenMode.fullScreen": false,
 
   /**
    * Language-specific settings
    */
-   "[blade]": {
-    "editor.autoClosingBrackets": "always",
-    "editor.formatOnSave": true,
-},
   "[javascript]": {
     "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
   },
   "[css]": {
     "editor.formatOnSave": true
@@ -365,24 +345,14 @@
     "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
     "editor.formatOnType": false, // Enable formatting while typing
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.associations": {
-    "*.css": "postcss",
-    "*.jsx": "javascript"
-  },
-  "typescript.validate.enable": true,
-  "javascript.validate.enable": true,
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "workbench.activityBar.location": "top",
-  "git.autofetch": false,
   "editor.accessibilitySupport": "off",
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "blade.format.enable": true,
+  "git.autofetch": false,
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "javascript.validate.enable": true,
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "typescript.validate.enable": true,
+  "workbench.activityBar.location": "top",
   "git.blame.editorDecoration.enabled": true,
   "rubyLsp.formatter": "standard",
   "rubyLsp.rubyVersionManager": {
