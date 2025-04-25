@@ -86,6 +86,7 @@ alias pn="pnpm"
 alias n="nvim"
 alias k="clear"
 alias cm="chezmoi"
+alias lg="lazygit"
 
 # fzf configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
