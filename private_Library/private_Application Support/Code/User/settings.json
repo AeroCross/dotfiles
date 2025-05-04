@@ -375,5 +375,6 @@
     "selectionRanges": true,
     "semanticHighlighting": true,
     "completion": true
-  }
+  },
+  "security.workspace.trust.untrustedFiles": "open"
 }
