@@ -5,7 +5,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="awesomepanda"
+ZSH_THEME="macovsky"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -86,6 +86,7 @@ alias pn="pnpm"
 alias n="nvim"
 alias k="clear"
 alias cm="chezmoi"
+alias lg="lazygit"
 
 # fzf configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -108,5 +109,15 @@ autoload -Uz compinit && compinit
 # mise installation
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 MISE_NODE_COREPACK=1
+
+ # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# work specific
+# postgres
+export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+
+# switch-env
+if [ -f "$HOME/projects/inf-scripts/switch-env/switch-env.sh" ] ; then
+        . "$HOME/projects/inf-scripts/switch-env/switch-env.sh"
+fi
