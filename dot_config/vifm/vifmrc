@@ -63,8 +63,8 @@ set novimhelp
 set norunexec
 
 " Selected color scheme
-
-colorscheme Default
+" Ensure to install https://github.com/vifm/vifm-colors
+colorscheme palenight
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
