@@ -80,7 +80,8 @@ source "$ZSH"/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export EDITOR="code -w"
+export EDITOR="nvim"
+export VISUAL="nvim"
 alias v="vifm ."
 alias pn="pnpm"
 alias n="nvim"
