@@ -376,7 +376,7 @@
     "semanticHighlighting": true,
     "completion": true
   },
-   "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.untrustedFiles": "open",
   "cSpell.language": "en-GB",
   "cSpell.enabledFileTypes": {
     "*": false
