@@ -43,9 +43,11 @@ Plug 'vim-scripts/argtextobj.vim'
 Plug 'tpope/vim-surround'
 
 set easymotion
+let g:EasyMotion_do_mapping=0
+
 set quickscope
 set which-key
-set timeoutlen=15000
+set notimeout
 
 " Exit insert mode when mashing j
 " imap jj <Esc>
@@ -87,7 +89,7 @@ vnoremap L $h
 " Word under cursor
 nnoremap <leader>hw *N
 " Select all
-nnoremap <leader>he ggVG
+nnoremap <leader>ha ggVG
 
 " Go
 nmap gD <Action>(GotoTypeDeclaration)
@@ -107,8 +109,11 @@ nmap <leader>sr <Action>(RecentChangedFiles)
 nmap <leader>ss <Action>(FileStructurePopup)
 
 " Harpoon
-nmap <leader>hm <action>(HarpoonerToggleQuickMenu)
-nmap <leader>ha <action>(HarpoonerToggleFile)
+nmap <leader>hs <Action>(HarpoonerToggleQuickMenu)
+nmap <leader>ht <Action>(HarpoonerToggleFile)
+nmap <leader>hn <Action>(HarpoonerNextFileAction)
+nmap <leader>hp <Action>(HarpoonerPreviousFileAction)
+nmap <leader>hc <Action>(HarpoonerClearMenu)
 
 nmap <M-j> <Action>(HarpoonerOpenFile0)
 nmap <M-k> <Action>(HarpoonerOpenFile1)
@@ -120,14 +125,8 @@ nmap <M-s> <Action>(HarpoonerOpenFile5)
 nmap <M-d> <Action>(HarpoonerOpenFile6)
 nmap <M-f> <Action>(HarpoonerOpenFile7)
 
-nmap <leader>hn <Action>(HarpoonerNextFileAction)
-nmap <leader>hp <Action>(HarpoonerPreviousFileAction)
-
-nmap <leader>hc <Action>(HarpoonerClearMenu)
 
 " Easymotion
-let g:EasyMotion_do_mapping
-
 nmap <leader>j <Plug>(easymotion-prefix)
 nmap <leader>j/ <Plug>(easymotion-f)
 nmap <leader>j? <Plug>(easymotion-F)
