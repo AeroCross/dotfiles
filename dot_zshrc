@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails)
+plugins=(git)
 
 # Load configuration
 source "$ZSH"/oh-my-zsh.sh
@@ -87,6 +87,14 @@ alias n="nvim"
 alias k="clear"
 alias cm="chezmoi"
 alias lg="lazygit"
+alias mine="open -na RubyMine.app --args \"$@\""
+alias ls="eza -lah --no-user --no-permissions --sort type"
+alias ll="ls"
+alias cat="bat"
+alias config="n ~/.zshrc"
+alias vimconfig="n ~/.config/nvim/init.lua"
+alias ideaconfig="n ~/.ideavimrc"
+alias s="bundle exec spring"
 
 # fzf configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -103,9 +111,6 @@ function search_file_contents() {
 # autojump configuration
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
-# set up zsh autocompletions
-autoload -Uz compinit && compinit
-
 # mise installation
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 MISE_NODE_COREPACK=1
@@ -116,8 +121,16 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # work specific
 # postgres
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+export PGGSSENCMODE="disable"
+
+# fixes spring failing in macOS M4
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# attempt to figure out what's going on with freezes
+SPRING_LOG=/dev/fd/2
 
 # switch-env
 if [ -f "$HOME/projects/inf-scripts/switch-env/switch-env.sh" ] ; then
         . "$HOME/projects/inf-scripts/switch-env/switch-env.sh"
 fi
+export FPATH="~/projects/github/eza/completions/zsh:$FPATH"
