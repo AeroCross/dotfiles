@@ -125,7 +125,6 @@ nmap <M-s> <Action>(HarpoonerOpenFile5)
 nmap <M-d> <Action>(HarpoonerOpenFile6)
 nmap <M-f> <Action>(HarpoonerOpenFile7)
 
-
 " Easymotion
 nmap <leader>j <Plug>(easymotion-prefix)
 nmap <leader>j/ <Plug>(easymotion-f)

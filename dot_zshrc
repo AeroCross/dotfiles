@@ -80,6 +80,7 @@ source "$ZSH"/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# TODO: Have a file for environment variables, potentially use dotenv
 export EDITOR="nvim"
 export VISUAL="nvim"
 alias v="vifm ."
@@ -89,12 +90,16 @@ alias k="clear"
 alias cm="chezmoi"
 alias lg="lazygit"
 alias mine="open -na RubyMine.app --args \"$@\""
+
+# TODO: Add all the cool things from Linux, like ripgrep and yazi.
 alias ls="eza -lah --no-user --no-permissions --sort type"
 alias ll="ls"
 alias cat="bat"
-alias config="n ~/.zshrc"
+alias shconfig="n ~/.zshrc"
 alias vimconfig="n ~/.config/nvim/init.lua"
 alias ideaconfig="n ~/.ideavimrc"
+
+# TODO: have a place for work specific stuff.
 alias s="bundle exec spring"
 
 # fzf configuration
@@ -133,6 +138,11 @@ SPRING_LOG=/dev/fd/2
 # switch-env
 if [ -f "$HOME/projects/inf-scripts/switch-env/switch-env.sh" ] ; then
         . "$HOME/projects/inf-scripts/switch-env/switch-env.sh"
+fi
+
+# ekis-jumpbox-session
+if [ -f "$HOME/projects/inf-scripts/eks-jumpbox-session/eks-jumpbox-session" ] ; then
+        export PATH="$HOME/projects/inf-scripts/eks-jumpbox-session:$PATH"
 fi
 
 # eza setup
