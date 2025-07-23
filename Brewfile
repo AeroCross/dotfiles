@@ -2,6 +2,8 @@
 brew "bat"
 brew "chezmoi"
 brew "coreutils"
+brew "direnv"
+brew "eza"
 brew "fd"
 brew "fzf"
 brew "gh"
@@ -14,14 +16,17 @@ brew "mise"
 brew "neovim"
 brew "ripgrep"
 brew "shellcheck"
+brew "tealdeer"
 brew "tree"
+brew "ugrep"
 brew "unzip"
+brew "zoxide"
 
 # Experimental
-brew "cheat"
+brew "atuin"
 brew "entr"
-brew "mcfly"
 brew "gping"
+brew "mcfly"
 
 # Mac OS specific stuff
 tap "1password/tap"
