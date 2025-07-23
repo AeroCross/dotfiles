@@ -18,6 +18,7 @@ brew "shellcheck"
 brew "tealdeer"
 brew "tree"
 brew "unzip"
+brew "yazi"
 brew "zellij"
 
 # Libraries
