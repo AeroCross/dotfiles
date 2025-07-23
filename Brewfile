@@ -1,7 +1,7 @@
 # Stable
 brew "bat"
 brew "chezmoi"
-brew "coreutils"
+brew "eza"
 brew "fd"
 brew "fzf"
 brew "gh"
@@ -10,15 +10,21 @@ brew "git-delta"
 brew "git-town"
 brew "jid"
 brew "jq"
+brew "lazygit"
 brew "mise"
 brew "neovim"
 brew "ripgrep"
 brew "shellcheck"
+brew "tealdeer"
 brew "tree"
 brew "unzip"
+brew "zellij"
+
+# Libraries
+brew "ast-grep"
+brew "coreutils"
 
 # Experimental
-brew "cheat"
 brew "entr"
 brew "mcfly"
 brew "gping"
