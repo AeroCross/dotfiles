@@ -27,6 +27,7 @@ brew "ast-grep"
 brew "coreutils"
 
 # Experimental
+brew "atuin"
 brew "entr"
 brew "mcfly"
 brew "gping"
