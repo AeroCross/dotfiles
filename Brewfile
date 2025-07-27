@@ -1,8 +1,6 @@
 # Stable
 brew "bat"
 brew "chezmoi"
-brew "coreutils"
-brew "direnv"
 brew "eza"
 brew "fd"
 brew "fzf"
@@ -10,8 +8,7 @@ brew "gh"
 brew "git"
 brew "git-delta"
 brew "git-town"
-brew "jid"
-brew "jq"
+brew "lazygit"
 brew "mise"
 brew "neovim"
 brew "ripgrep"
@@ -20,13 +17,19 @@ brew "tealdeer"
 brew "tree"
 brew "ugrep"
 brew "unzip"
+brew "yazi"
+brew "yq"
+brew "zellij"
 brew "zoxide"
 
+# Libraries
+brew "ast-grep"
+brew "coreutils"
+
 # Experimental
-brew "atuin"
 brew "entr"
-brew "gping"
 brew "mcfly"
+brew "gping"
 
 # Mac OS specific stuff
 tap "1password/tap"
