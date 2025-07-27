@@ -17,9 +17,11 @@ brew "ripgrep"
 brew "shellcheck"
 brew "tealdeer"
 brew "tree"
+brew "ugrep"
 brew "unzip"
 brew "yazi"
 brew "zellij"
+brew "zoxide"
 
 # Libraries
 brew "ast-grep"
