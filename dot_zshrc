@@ -46,7 +46,6 @@ alias ll="ls"
 alias cat="bat"
 alias shconfig="n ~/.zshrc"
 alias ideaconfig="n ~/.ideavimrc"
-alias z="zoxide"
 alias grep="ugrep"
 
 # TODO: have a place for work specific stuff.
@@ -54,6 +53,9 @@ alias s="bundle exec spring"
 
 # fzf
 source <(fzf --zsh)
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # mise
 eval "$($bprefix/bin/mise activate zsh)"
