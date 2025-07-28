@@ -87,9 +87,9 @@ vnoremap L $h
 
 " Highlight
 " Word under cursor
-nnoremap <leader>hw *N
+nnoremap <leader>h *N
 " Select all
-nnoremap <leader>ha ggVG
+nnoremap <leader>ba ggVG
 
 " Go
 nmap gD <Action>(GotoTypeDeclaration)
@@ -109,11 +109,11 @@ nmap <leader>sr <Action>(RecentChangedFiles)
 nmap <leader>ss <Action>(FileStructurePopup)
 
 " Harpoon
-nmap <leader>hs <Action>(HarpoonerToggleQuickMenu)
-nmap <leader>ht <Action>(HarpoonerToggleFile)
-nmap <leader>hn <Action>(HarpoonerNextFileAction)
-nmap <leader>hp <Action>(HarpoonerPreviousFileAction)
-nmap <leader>hc <Action>(HarpoonerClearMenu)
+nmap <leader>Hs <Action>(HarpoonerToggleQuickMenu)
+nmap <leader>Ht <Action>(HarpoonerToggleFile)
+nmap <leader>Hn <Action>(HarpoonerNextFileAction)
+nmap <leader>Hp <Action>(HarpoonerPreviousFileAction)
+nmap <leader>Hc <Action>(HarpoonerClearMenu)
 
 nmap <M-j> <Action>(HarpoonerOpenFile0)
 nmap <M-k> <Action>(HarpoonerOpenFile1)
