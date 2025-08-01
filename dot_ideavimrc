@@ -133,3 +133,12 @@ nmap <leader>je <Plug>(easymotion-bd-el)
 nmap <leader>jb <Plug>(easymotion-bd-bl)
 nmap <leader>jj <Plug>(easymotion-j)
 nmap <leader>jk <Plug>(easymotion-k)
+
+" Fuzzier (Telescope)
+map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>fm <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>fv <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrep)
+
+" Other finding hotkeys
+map <Leader>fs <action>(FileStructurePopup)
