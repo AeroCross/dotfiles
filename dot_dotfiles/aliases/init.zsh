@@ -7,11 +7,14 @@ alias ls="eza -lah --no-user --no-permissions --sort type"
 alias ll="ls"
 alias cat="bat"
 alias grep="ugrep"
+alias reload="source ~/.zshrc"
 
 # Apps
 alias n="nvim"
 alias k="clear"
 alias lg="lazygit"
+
+# Chezmoi
 alias cm="chezmoi"
 alias cma="chezmoi add"
 alias cme="chezmoi edit"
