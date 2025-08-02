@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://github.com/ZimbiX/dotfiles/blob/master/bin/mac-focus-app
+
 set -Eeuo pipefail
 
 # Usage - e.g.:
