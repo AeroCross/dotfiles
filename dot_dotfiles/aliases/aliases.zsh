@@ -30,6 +30,8 @@ alias gp="git push"
 alias gf="git fetch"
 alias gco="git checkout"
 alias grh="git reset --hard"
+alias gc="git commit"
+alias gca="git commit --amend"
 
 # TODO: This is macOS specific
 alias mine="open -na RubyMine.app --args \"$@\""
