@@ -11,12 +11,15 @@ alias grep="ugrep"
 # Apps
 alias n="nvim"
 alias k="clear"
-alias cm="chezmoi"
 alias lg="lazygit"
+alias cm="chezmoi"
+alias cma="chezmoi add"
+alias cme="chezmoi edit"
+alias cmea="chezmoi edit --apply"
 
 # Config
-alias config="nvim ~/.zshrc"
-alias config-idea="nvim ~/.ideavimrc"
+alias config="cma ~/.zshrc"
+alias config-idea="cma ~/.ideavimrc"
 
 # Git
 alias ga="git add"
