@@ -26,8 +26,8 @@ export VISUAL="nvim"
 # ================================
 # Load system-specific scripts
 # ================================
-source $HOME/.dotfiles/init/init.zsh
-source $HOME/.dotfiles/aliases/aliases.zsh
+source $HOME/.dotfiles/setup/init.zsh
+source $HOME/.dotfiles/aliases/init.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
