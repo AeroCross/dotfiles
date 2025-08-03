@@ -1,0 +1,4 @@
+[window]
+opacity = 1
+blur = false
+startup_mode = "Maximized"
