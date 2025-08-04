@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+
+# Takes the current contents of the clipboard (which expects it to be a Jira URL)
+# and creates a feature branch with the ticket ID and the name passed as the argument.
+#
+# Depends on:
+# - macOS
+# - Git Town
+#
+# Usage (assuming https://attainhealthtech.atlassian.net/browse/ES-45149 is in the clipboard):
+# feature Create new "Delete" command for Client
+#
+# Result:
+# git hack feature/es-45149/create-new-delete-command-for-client
+
+url=$(pbpaste)
+ticket=$(echo "$url" | grep -oE '[A-Z]+-[0-9]+$')
+
+if [[ -z "$ticket" ]]; then
+  echo "Clipboard does not contain a valid Jira ticket URL (e.g., https://attainhealthtech.atlassian.net/browse/ES-45093)"
+  exit 1
+fi
+
+desc=$(echo "$*" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g' | sed -E 's/^-+|-+$//g')
+
+git hack "feature/${ticket}/${desc}"
