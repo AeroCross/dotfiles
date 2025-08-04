@@ -90,6 +90,8 @@ vnoremap L $h
 nnoremap <leader>h *N
 " Select all
 nnoremap <leader>ba ggVG
+" Formatting
+nmap <leader>cf <Action>(ReformatCode)
 
 " Go
 nmap gD <Action>(GotoTypeDeclaration)
