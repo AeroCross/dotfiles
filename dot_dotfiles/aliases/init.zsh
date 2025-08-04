@@ -16,10 +16,9 @@ alias lg="lazygit"
 
 # Chezmoi
 alias cm="chezmoi"
-alias cma="chezmoi add"
+alias cma="chezmoi apply"
 alias cme="chezmoi edit"
 alias cmea="chezmoi edit --apply"
-alias cmap="chezmoi apply"
 alias cmu="chezmoi update"
 alias cmua="chezmoi update --apply"
 
