@@ -20,6 +20,8 @@ alias cma="chezmoi add"
 alias cme="chezmoi edit"
 alias cmea="chezmoi edit --apply"
 alias cmap="chezmoi apply"
+alias cmu="chezmoi update"
+alias cmua="chezmoi update --apply"
 
 # Config
 alias config="cmea ~/.zshrc"
