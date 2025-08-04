@@ -19,10 +19,11 @@ alias cm="chezmoi"
 alias cma="chezmoi add"
 alias cme="chezmoi edit"
 alias cmea="chezmoi edit --apply"
+alias cmap="chezmoi apply"
 
 # Config
-alias config="cma ~/.zshrc"
-alias config-idea="cma ~/.ideavimrc"
+alias config="cmea ~/.zshrc"
+alias config-idea="cmea ~/.ideavimrc"
 
 # Git
 alias ga="git add"
@@ -40,5 +41,5 @@ alias gc="git commit"
 alias gca="git commit --amend"
 alias gb="git branch"
 
-# TODO: This is macOS specific
+# TODO: This is macOS specific, move to Template
 alias mine="open -na RubyMine.app --args \"$@\""
