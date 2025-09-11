@@ -34,3 +34,5 @@
 	set-parent = town set-parent
 	ship = town ship
 	sync = town sync
+  hide = update-index --assume-unchanged
+  unhide = update-index --no-assume-unchanged
