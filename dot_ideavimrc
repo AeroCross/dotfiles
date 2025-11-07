@@ -108,7 +108,7 @@ nmap <leader>rh <Action>(RunClass)
 
 " Search
 nmap <leader>sr <Action>(RecentChangedFiles)
-nmap <leader>ss <Action>(FileStructurePopup)
+" nmap <leader>ss <Action>(FileStructurePopup)
 
 " Harpoon
 nmap <leader>Hs <Action>(HarpoonerToggleQuickMenu)
@@ -144,3 +144,6 @@ map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrep)
 
 " Other finding hotkeys
 map <Leader>fs <action>(FileStructurePopup)
+
+" Toggle fold
+map <Leader>tf <action>(ExpandCollapseToggleAction)
