@@ -18,7 +18,7 @@ set scrolloff=5
 set clipboard=unnamedplus
 
 " Don't use Ex mode, use Q for formatting.
-map Q gq
+map Q <Action>(Tool_External Tools_Format current file with `stree write`)
 
 " Other defaults
 set hlsearch
@@ -54,7 +54,6 @@ set notimeout
 
 " Remove highlight when searching with Enter
 nmap <CR> :nohl<CR>
-
 
 " Paste replaces visual selection without yanking
 " vmap p _dP
@@ -108,7 +107,10 @@ nmap <leader>rh <Action>(RunClass)
 
 " Search
 nmap <leader>sr <Action>(RecentChangedFiles)
+map <Leader>fs <action>(FileStructurePopup)
 " nmap <leader>ss <Action>(FileStructurePopup)
+map <Leader>ff <action>(FindInPath)
+map <Leader>fp <action>(CopyReferencePopupGroup)
 
 " Harpoon
 nmap <leader>Hs <Action>(HarpoonerToggleQuickMenu)
@@ -136,14 +138,13 @@ nmap <leader>jb <Plug>(easymotion-bd-bl)
 nmap <leader>jj <Plug>(easymotion-j)
 nmap <leader>jk <Plug>(easymotion-k)
 
-" Fuzzier (Telescope)
-map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+" Telescope
 map <Leader>fm <action>(com.mituuz.fuzzier.FuzzyMover)
 map <Leader>fv <action>(com.mituuz.fuzzier.FuzzierVCS)
 map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrep)
 
-" Other finding hotkeys
-map <Leader>fs <action>(FileStructurePopup)
+" Other actions
+nmap <leader>lh <Action>(LocalHistory.ShowHistory)
 
 " Toggle fold
 map <Leader>tf <action>(ExpandCollapseToggleAction)

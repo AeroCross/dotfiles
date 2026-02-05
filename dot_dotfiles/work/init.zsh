@@ -15,6 +15,10 @@ if [ -z ${ANDROID_HOME+x} ]; then
   export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
 fi
 
+if [ -z "${ANDROID_SDK_ROOT:-}" ]; then
+  export ANDROID_SDK_ROOT="${ANDROID_HOME:-}";
+fi
+
 # ================================
 # In-House Scripts
 # ================================
