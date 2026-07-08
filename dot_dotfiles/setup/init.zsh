@@ -42,7 +42,9 @@ function y() {
 }
 
 # zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+if [ -z "$TERMINAL_EMULATOR" ] && [ -z "$ZELLIJ" ]; then
+    eval "$(zellij setup --generate-auto-start zsh)"
+fi
 
 # atuin
 eval "$(atuin init zsh --disable-up-arrow)"
