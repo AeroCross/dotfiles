@@ -15,6 +15,7 @@ set ideamarks
 set scrolloff=5
 
 " Use the system clipboard
+" NOTE: Shouldn't this be ideaput?
 set clipboard=unnamedplus
 
 " Don't use Ex mode, use Q for formatting.
@@ -48,6 +49,8 @@ let g:EasyMotion_do_mapping=0
 set quickscope
 set which-key
 set notimeout
+set VimEverywhere
+set mini-ai
 
 " Exit insert mode when mashing j
 " imap jj <Esc>
@@ -135,11 +138,8 @@ map <Leader>fP <action>(CopyReferencePopupGroup)
 nmap <leader>ff <Action>(GotoFile)
 
 " Harpoon
-nmap <leader>Hs <Action>(HarpoonerToggleQuickMenu)
-nmap <leader>Ht <Action>(HarpoonerToggleFile)
-nmap <leader>Hn <Action>(HarpoonerNextFileAction)
-nmap <leader>Hp <Action>(HarpoonerPreviousFileAction)
-nmap <leader>Hc <Action>(HarpoonerClearMenu)
+nmap <leader>H <Action>(HarpoonerToggleFile)
+nmap <leader>h <Action>(HarpoonerToggleQuickMenu)
 
 nmap <M-j> <Action>(HarpoonerOpenFile0)
 nmap <M-k> <Action>(HarpoonerOpenFile1)
