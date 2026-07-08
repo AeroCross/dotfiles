@@ -23,8 +23,8 @@ setopt HIST_IGNORE_ALL_DUPS
 # Do not display a duplicate previously found in search
 setopt HIST_FIND_NO_DUPS
 
-# fzf
-source <(fzf --zsh)
+# fzf, without CTRL+R to allow atuin to work
+FZF_CTRL_R_COMMAND= source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -40,3 +40,10 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# zellij
+eval "$(zellij setup --generate-auto-start zsh)"
+
+# atuin
+eval "$(atuin init zsh --disable-up-arrow)"
+
