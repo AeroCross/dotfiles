@@ -108,10 +108,15 @@ nmap <leader>wv <Action>(MoveTabRight)
 nmap <leader>wd <Action>(MoveTabDown)
 nmap <leader>wh <Action>(PrevSplitter)
 nmap <leader>wl <Action>(NextSplitter)
+nmap <leader>ww <Action>(NextSplitter)
+nmap <leader>wx <Action>(MoveEditorToOppositeTabGroup)
+nmap <leader>wo <Action>(UnsplitAll)
+nmap <leader>wm <Action>(MaximizeEditorInSplit)
 
 " Tab Management
 nmap <leader>bb <Action>(NextSplitter)
 nmap <leader>bd <Action>(CloseContent)
+nmap <leader>, <Action>(com.mituuz.fuzzier.search.FuzzierOpenTabs)
 
 " Testing
 nmap <leader>tg <Action>(GotoTest)
@@ -122,10 +127,11 @@ nmap <leader>tt <Action>(Test)
 " Search
 nmap <leader>ss <Action>(FileStructurePopup)
 map <Leader>sg <action>(FindInPath)
+nmap <leader>sB <Action>(com.mituuz.fuzzier.grep.FuzzyGrepOpenTabs)
 
 " Files
 nmap <leader>fr <Action>(RecentChangedFiles)
-map <Leader>fp <action>(CopyReferencePopupGroup)
+map <Leader>fP <action>(CopyReferencePopupGroup)
 nmap <leader>ff <Action>(GotoFile)
 
 " Harpoon
@@ -147,8 +153,6 @@ nmap <M-f> <Action>(HarpoonerOpenFile7)
 
 " Other actions
 nmap <leader>lh <Action>(LocalHistory.ShowHistory)
-nmap <leader>e <Action>(ActivateProjectToolWindow)
-nmap <leader>, <Action>(RecentChangedFiles)
 
 " Toggle fold
 map <Leader>tf <action>(ExpandCollapseToggleAction)
