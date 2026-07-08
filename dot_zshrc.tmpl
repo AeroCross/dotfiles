@@ -12,12 +12,6 @@ if [ ! -f /opt/homebrew/bin/brew ]; then
 fi
 {{ end }}
 
-# zellij
-eval "$(zellij setup --generate-auto-start zsh)"
-
-# atuin
-eval "$(atuin init zsh --disable-up-arrow)"
-
 # ================================
 # Environment Variables
 # ================================
@@ -35,5 +29,5 @@ source $HOME/.dotfiles/ruby/init.zsh
 source $HOME/.dotfiles/work/init.zsh
 {{ end }}
 
-# starship prompt
+# Prompt, which should be the last thing always
 eval "$(starship init zsh)"
